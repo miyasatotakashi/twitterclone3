@@ -19,15 +19,12 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
     if @post.update(post_params)
       redirect_to posts_path, notice: "編集しました！"
     else
@@ -46,7 +43,7 @@ class PostsController < ApplicationController
     params.require(:post).permit(:content)
   end
 
-  def set_blog
+  def set_post
     @post = Post.find(params[:id])
   end
 end
