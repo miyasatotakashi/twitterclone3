@@ -8,10 +8,10 @@
 <% @posts.each do |post| %>
   <tr>
     <td><%= post.content %></td>
-    <td><%= link_to '詳細を確認する', posts_path(post_id) %></td>
-    <td><%= link_to '編集する', edit_posts_path(post_id) %></td>
+    <td><%= link_to '詳細を確認する', post_path(post.id) %></td>
+    <td><%= link_to '編集する', edit_post_path(post.id) %></td>
   </tr>
 <% end %>
 </table>
 
-<%= link_to '新しく投稿する', newp_post_path %>
+<%= link_to '新しく投稿する', new_post_path %>

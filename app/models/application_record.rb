@@ -1,3 +1,3 @@
 class ApplicationRecord < ActiveRecord::Base
-  validates :content, presence: true
+  self.abstract_class = true
 end
