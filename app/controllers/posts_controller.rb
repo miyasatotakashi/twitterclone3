@@ -10,10 +10,15 @@ class PostsController < ApplicationController
   def create
     Post.create(post_params)
     redirect_to new_post_path
-end
+  end
 
-private
+  def show
+    params[:id]
+  end
 
-def post_params
-  params.require(:post).permit(:content)
+  private
+
+  def post_params
+    params.require(:post).permit(:content)
+  end
 end
