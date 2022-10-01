@@ -8,4 +8,5 @@ class PostsController < ApplicationController
 
   def create
     Blog.create(content: params[:post][:content])
+    redirect_to new_blog_path
 end
