@@ -1,10 +1,27 @@
-<h3>以下の内容で、投稿する。</h3>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>twitterclone</title>
+  </head>
+  <body>
+  <header class="header">
+  <h3>以下の内容で、投稿する。</h3>
+  </header>
 
-<%= form_with(model: @post, url: posts_path, local: true) do |form| %>
-  <%= form.hidden_field :content %>
+  <div class="content">
+    <p><%= notice %></p>
+  <div class="content">
+    <%= form_with(model: @post, url: posts_path, local: true) do |form| %>
+    <%= form.hidden_field :content %>
 
-  <p>本文:<%= @post.content %></p>
-  <%= form.submit  "投稿する" %>
-<% end %>
-
-<%= form.submit '戻る', name: 'back' %>
+    <p>本文:<%= @post.content %></p>
+    <%= form.submit  "投稿する" %>
+    <%= form.submit '戻る', name: 'back' %>
+  <% end %>
+  </div>
+  <footer class="footer">
+    <p>Copyright © 2022 twitterclone</p>
+   </footer>
+  </body>
+</html>

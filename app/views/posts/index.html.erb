@@ -1,7 +1,17 @@
-<h1>ツイート一覧</h1>
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>twitterclone</title>
+  </head>
+  <body>
+  <header class="header">
+  <h1>トゥイッター</h1>
+  </header>
+    
 <p><%= notice %></p>
 
+<div class="content">
 <table>
   <tr>
     <th>内容</th>
@@ -17,4 +27,10 @@
 <% end %>
 </table>
 
-<%= link_to '新しく投稿する', new_post_path %>
+  <%= link_to '新しく投稿する', new_post_path %>
+  </div>
+  <footer class="footer">
+  <p>Copyright © 2022 twitterclone</p>
+</footer>
+  </body>
+</html>
